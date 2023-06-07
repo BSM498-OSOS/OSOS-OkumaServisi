@@ -1,5 +1,6 @@
 ﻿using Core.Utilities.Results;
 using Entity.Concrete;
+using Entity.Concrete.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,7 @@ namespace DataAccess.Abstract
     {
         public List<Reading> GetAll(Expression<Func<Reading,bool>> filter=null);
         public Reading Get(Expression<Func<Reading, bool>> filter);
+
+        public List<ConsumptionDto> GetConsumptions(Expression<Func<Reading, bool>> filter=null);
     }
 }

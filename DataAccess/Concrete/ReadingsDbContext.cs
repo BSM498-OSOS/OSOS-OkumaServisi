@@ -11,7 +11,7 @@ namespace DataAccess.Concrete
 
         public ReadingsDbContext()
         {
-            _client = new MongoClient("mongodb://localhost/");
+            _client = new MongoClient("mongodb://host.docker.internal/");//Değiştir
             _db = _client.GetDatabase("Readings");
             Collection = _db.GetCollection<Reading>("Reading");
         }
